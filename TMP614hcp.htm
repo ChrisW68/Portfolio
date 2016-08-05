@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>$("links").addClass("animated hinge");</script>
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,15 +32,22 @@ body {
 	background-image: url(img/Tech%20Minimalist%20Wallpaper.jpg);
 }
 
-.jumbotron {
-	margin: 0px;
-	background-image: url(img/Tech%20Minimalist%20Wallpaper.jpg);
-}
-
 .section-two {
 	margin: 0px;
 	background-image:url(img/Portland_Oregon_Riverplace.JPG);
-	width: 100%;
+	background-size: cover;
+	height: auto;
+}
+
+.container {
+	/* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(114, 143, 240, 0.5);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 article,
 aside,
@@ -55,13 +63,6 @@ nav,
 section,
 summary {
   display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
 }
 audio:not([controls]) {
   display: none;
@@ -6643,6 +6644,16 @@ button.close {
 .ui-button{display:inline-block;position:relative;padding:0;line-height:normal;margin-right:.1em;cursor:pointer;vertical-align:middle;text-align:center;overflow:visible}.ui-button,.ui-button:link,.ui-button:visited,.ui-button:hover,.ui-button:active{text-decoration:none}.ui-button-icon-only{width:2.2em}button.ui-button-icon-only{width:2.4em}.ui-button-icons-only{width:3.4em}button.ui-button-icons-only{width:3.7em}.ui-button .ui-button-text{display:block;line-height:normal}.ui-button-text-only .ui-button-text{padding:.4em 1em}.ui-button-icon-only .ui-button-text,.ui-button-icons-only .ui-button-text{padding:.4em;text-indent:-9999999px}.ui-button-text-icon-primary .ui-button-text,.ui-button-text-icons .ui-button-text{padding:.4em 1em .4em 2.1em}.ui-button-text-icon-secondary .ui-button-text,.ui-button-text-icons .ui-button-text{padding:.4em 2.1em .4em 1em}.ui-button-text-icons .ui-button-text{padding-left:2.1em;padding-right:2.1em}input.ui-button{padding:.4em 1em}.ui-button-icon-only .ui-icon,.ui-button-text-icon-primary .ui-icon,.ui-button-text-icon-secondary .ui-icon,.ui-button-text-icons .ui-icon,.ui-button-icons-only .ui-icon{position:absolute;top:50%;margin-top:-8px}.ui-button-icon-only .ui-icon{left:50%;margin-left:-8px}.ui-button-text-icon-primary .ui-button-icon-primary,.ui-button-text-icons .ui-button-icon-primary,.ui-button-icons-only .ui-button-icon-primary{left:.5em}.ui-button-text-icon-secondary .ui-button-icon-secondary,.ui-button-text-icons .ui-button-icon-secondary,.ui-button-icons-only .ui-button-icon-secondary{right:.5em}.ui-buttonset{margin-right:7px}.ui-buttonset .ui-button{margin-left:0;margin-right:-.3em}input.ui-button::-moz-focus-inner,button.ui-button::-moz-focus-inner{border:0;padding:0}
 
 </style>
+<link rel="stylesheet" title="Disabled for Preview-in-Browser: jQueryAssets/jquery.ui.slider.min.css" type="text/css">
+<style type="text/css">
+
+/*! jQuery UI - v1.10.4 - 2014-04-02
+* http://jqueryui.com
+* Copyright 2014 jQuery Foundation and other contributors; Licensed MIT */
+
+.ui-slider{position:relative;text-align:left}.ui-slider .ui-slider-handle{position:absolute;z-index:2;width:1.2em;height:1.2em;cursor:default}.ui-slider .ui-slider-range{position:absolute;z-index:1;font-size:.7em;display:block;border:0;background-position:0 0}.ui-slider.ui-state-disabled .ui-slider-handle,.ui-slider.ui-state-disabled .ui-slider-range{filter:inherit}.ui-slider-horizontal{height:.8em}.ui-slider-horizontal .ui-slider-handle{top:-.3em;margin-left:-.6em}.ui-slider-horizontal .ui-slider-range{top:0;height:100%}.ui-slider-horizontal .ui-slider-range-min{left:0}.ui-slider-horizontal .ui-slider-range-max{right:0}.ui-slider-vertical{width:.8em;height:100px}.ui-slider-vertical .ui-slider-handle{left:-.3em;margin-left:0;margin-bottom:-.6em}.ui-slider-vertical .ui-slider-range{left:0;width:100%}.ui-slider-vertical .ui-slider-range-min{bottom:0}.ui-slider-vertical .ui-slider-range-max{top:0}
+
+</style>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -6652,8 +6663,8 @@ button.close {
     <![endif]-->
 <script src="jQueryAssets/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="jQueryAssets/jquery.ui-1.10.4.button.min.js" type="text/javascript"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.slider.min.js" type="text/javascript"></script>
 </head>
-
 <body>
 <nav class="navbar navbar-default">
   <div class="container"> 
@@ -6668,7 +6679,6 @@ button.close {
         <li><a href="#">Contact</a></li>
       </ul>
 	</div>
-    <!-- /.navbar-collapse --> 
 </div>
   <!-- /.container-fluid --> 
 </nav>
@@ -6696,11 +6706,12 @@ button.close {
       </div>
     </div>
   </div>
-  <div class="container well">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-4 col-md-4 col-sm-6">
-        <div class="media">
-          <div class="media-left"> <a href="#"> <img class="media-object" src="img/35X35.gif" alt="..."> </a> </div>
+      <h1 class="portfolio text-center">Portfolio</h1>
+      <div class="col-lg-2 col-md-4 col-sm-8">
+        <div class="portfolio-1">
+          <div class="portfolio-1-left"> <a href="#"> <img class="portfolio-1-object" src="img/35X35.gif" alt="..."> </a> </div>
           <div class="media-body">
             <h2 class="media-heading">Media heading</h2>
             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
@@ -6714,7 +6725,7 @@ button.close {
             Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-4 col-sm-6">
+      <div class="col-lg-4 col-md-4 col-sm-4">
         <div class="media">
           <div class="media-left"> <a href="#"> <img class="media-object" src="img/35X35.gif" alt="..."></a></div>
           <div class="media-body">
@@ -6777,24 +6788,27 @@ button.close {
 <div class="section well center-block">
     <div class="container">
    	  <div class="row">
-	  	<div class="col-lg-4 col-md-4">
+	  	<div class="col-md-4 col-sm-8">
 		  <h3 class="links text-center">GET IN TOUCH</h3>
+          <h5>Want to get in touch? Be it to request more info about myself or my experience, to ask for my resume, tips on fix bicycle, random questions about life, or even if only for some nice cider here in Portland... feel free to contact me.</h5>
+         </div>
+         <div class="col-lg-4">
           <address class="text-center">
   <strong>Chris Wiseman</strong><br>
   email: chris.wiseman74@gmail.com<br>
   <abbr title="Phone">P:</abbr> (916) 759-4893
 </address>
-<h5 class="links text-center">The below buttons will guide you to my code and linkIn account</h5>
+<h5 class="links col-md-4">The below buttons will guide you to my code and linkIn account</h5>
        	  <a href="https://www.linkedin.com/in/mrwiseman">
-          <img src="img/linkedin.jpg" width="35px"/>
+          <img src="img/linkedin.jpg" width="35px" id="linkedin" onclick="myFunction()"/>
+          
           </a>
           <a href="https://github.com/ChrisW68">
           <img src="img/github.jpg" width="45px"/>
           </a>
 </div>
-		<div class="col-lg-4 col-md-4">
-        	
-        </div>
+<div>
+</div>
 </div>
     </div>
 </div>
@@ -6810,5 +6824,10 @@ button.close {
 <script src="js/jquery-1.11.2.min.js"></script> 
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript">
+function myFunction() {
+$("linkedin").addClass("animated hinge");
+});
+</script>
 </body>
 </html>

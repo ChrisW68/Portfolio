@@ -19,22 +19,18 @@ body {
 	background-image: url(../img/Tech%20Minimalist%20Wallpaper.jpg);
 }
 
-.jumbotron {
-	margin: 0px;
-	background-image: url(../img/Tech%20Minimalist%20Wallpaper.jpg);
-}
-
 .section-two {
 	margin: 0px;
 	background-image:url(../img/Portland_Oregon_Riverplace.JPG);
 	background-size: cover;
+	height: auto;
 }
 
 .container {
 	/* Fallback for web browsers that don't support RGBa */
     background-color: rgb(0, 0, 0);
     /* RGBa with 0.6 opacity */
-    background-color: rgba(114, 143, 240, 0.60);
+    background-color: rgba(114, 143, 240, 0.5);
     /* For IE 5.5 - 7*/
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
     /* For IE 8*/
@@ -54,13 +50,6 @@ nav,
 section,
 summary {
   display: block;
-}
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
 }
 audio:not([controls]) {
   display: none;
